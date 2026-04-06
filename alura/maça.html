@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Seu Entretenimento Favorito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- PÁGINA DE PERFIL -->
+    <div id="profilePage" class="page active">
+        <div class="profile-container">
+            <div class="profile-content">
+                <h1>Quem está assistindo?</h1>
+                <div class="profiles-grid">
+                    <div class="profile-card" onclick="selectProfile('João')">
+                        <img src="https://via.placeholder.com/150/FF6B6B/FFFFFF?text=J" alt="João">
+                        <p>João</p>
+                    </div>
+                    <div class="profile-card" onclick="selectProfile('Maria')">
+                        <img src="https://via.placeholder.com/150/4ECDC4/FFFFFF?text=M" alt="Maria">
+                        <p>Maria</p>
+                    </div>
+                    <div class="profile-card" onclick="selectProfile('Carlos')">
+                        <img src="https://via.placeholder.com/150/45B7D1/FFFFFF?text=C" alt="Carlos">
+                        <p>Carlos</p>
+                    </div>
+                    <div class="profile-card" onclick="selectProfile('Ana')">
+                        <img src="https://via.placeholder.com/150/FFA07A/FFFFFF?text=A" alt="Ana">
+                        <p>Ana</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA INICIAL -->
+    <div id="homePage" class="page">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <h2 class="logo">StreamFlix</h2>
+                <div class="nav-menu">
+                    <a href="#" class="nav-link active">Início</a>
+                    <a href="#" class="nav-link">Séries</a>
+                    <a href="#" class="nav-link">Filmes</a>
+                    <a href="#" class="nav-link">Populares</a>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <button class="search-btn">🔍</button>
+                <div class="profile-menu">
+                    <img id="profilePic" src="https://via.placeholder.com/40/FF6B6B/FFFFFF?text=J" alt="Perfil">
+                    <button onclick="backToProfile()" class="logout-btn">Sair</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO BANNER -->
+        <div class="hero-banner">
+            <div class="hero-content">
+                <h1>Bem-vindo ao StreamFlix</h1>
+                <p>Descubra seus filmes e séries favoritos</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">▶ Assistir Agora</button>
+                    <button class="btn btn-secondary">ℹ Mais Informações</button>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- SEÇÕES DE CONTEÚDO -->
+        <div class="content-container">
+            <!-- Seção de Destaque -->
+            <section class="content-section">
+                <h2 class="section-title">Em Destaque</h2>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/FF6B6B/FFFFFF?text=Filme+1" alt="Filme 1">
+                        <div class="item-info">
+                            <h3>Título do Filme</h3>
+                            <p class="rating">⭐ 8.5/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/4ECDC4/FFFFFF?text=Filme+2" alt="Filme 2">
+                        <div class="item-info">
+                            <h3>Outro Filme</h3>
+                            <p class="rating">⭐ 9.0/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/45B7D1/FFFFFF?text=Filme+3" alt="Filme 3">
+                        <div class="item-info">
+                            <h3>Mais um Filme</h3>
+                            <p class="rating">⭐ 8.8/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/FFA07A/FFFFFF?text=Filme+4" alt="Filme 4">
+                        <div class="item-info">
+                            <h3>Outro Título</h3>
+                            <p class="rating">⭐ 8.2/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/FFB6C1/FFFFFF?text=Filme+5" alt="Filme 5">
+                        <div class="item-info">
+                            <h3>Novo Lançamento</h3>
+                            <p class="rating">⭐ 9.2/10</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Ação -->
+            <section class="content-section">
+                <h2 class="section-title">Ação e Aventura</h2>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/E74C3C/FFFFFF?text=Ação+1" alt="Ação 1">
+                        <div class="item-info">
+                            <h3>Filme de Ação</h3>
+                            <p class="rating">⭐ 8.7/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/C0392B/FFFFFF?text=Ação+2" alt="Ação 2">
+                        <div class="item-info">
+                            <h3>Aventura Épica</h3>
+                            <p class="rating">⭐ 9.1/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/16A085/FFFFFF?text=Ação+3" alt="Ação 3">
+                        <div class="item-info">
+                            <h3>Perseguição</h3>
+                            <p class="rating">⭐ 8.4/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/27AE60/FFFFFF?text=Ação+4" alt="Ação 4">
+                        <div class="item-info">
+                            <h3>Heróis em Ação</h3>
+                            <p class="rating">⭐ 8.9/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/2980B9/FFFFFF?text=Ação+5" alt="Ação 5">
+                        <div class="item-info">
+                            <h3>Combate Final</h3>
+                            <p class="rating">⭐ 8.6/10</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Comédia -->
+            <section class="content-section">
+                <h2 class="section-title">Comédia</h2>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/F39C12/FFFFFF?text=Comédia+1" alt="Comédia 1">
+                        <div class="item-info">
+                            <h3>Muito Engraçado</h3>
+                            <p class="rating">⭐ 8.0/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/D68910/FFFFFF?text=Comédia+2" alt="Comédia 2">
+                        <div class="item-info">
+                            <h3>Risadas Garantidas</h3>
+                            <p class="rating">⭐ 8.3/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/9B59B6/FFFFFF?text=Comédia+3" alt="Comédia 3">
+                        <div class="item-info">
+                            <h3>Hilário</h3>
+                            <p class="rating">⭐ 7.9/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/8E44AD/FFFFFF?text=Comédia+4" alt="Comédia 4">
+                        <div class="item-info">
+                            <h3>Pura Diversão</h3>
+                            <p class="rating">⭐ 8.1/10</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/300x450/34495E/FFFFFF?text=Comédia+5" alt="Comédia 5">
+                        <div class="item-info">
+                            <h3>Super Engraçado</h3>
+                            <p class="rating">⭐ 8.5/10</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 StreamFlix. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
